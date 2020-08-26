@@ -1,0 +1,37 @@
+
+.center {
+  	width: fit-content;
+  	padding: 10px;
+}
+
+p {
+    position: relative; 
+    left: 120px; 
+}
+
+table, td, th {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    text-align: right;
+    padding: 10px ;
+}
+
+
+.first {
+    text-align: center;
+}
+
+.second {
+    text-align: left;
+}
+
+.fourth {
+    background-color: yellow;
+}
+
+.six {
+    background-color: red;
+}
+
+
+
