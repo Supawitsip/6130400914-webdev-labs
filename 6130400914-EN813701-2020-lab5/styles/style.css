@@ -1,0 +1,154 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #E43C61;
+}
+
+header .pic {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+header h3, header h4 {
+    margin: 0;
+}
+
+header .follow-btn {
+    display: flex;
+    align-items:center;
+}
+
+header .follow-btn button {
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+
+table, tr ,td ,th {
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 2;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    background-color: greenyellow;
+}
+
+td {
+    background-color: lightsteelblue;
+}
+
+ul.square {
+    list-style-type: square;
+}
+
+div.internal {
+    background-color: #DCA053;
+    margin: auto;
+    padding: 20px;
+    /*border: 5px solid black;*/
+}
+
+div.backgroundExternal {
+    background-color: #A16C21;
+    list-style-type: none;   
+    overflow: hidden;
+}
+
+img {
+    height: auto;
+    width: 30%;
+    border-radius: 50%;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+#box-container {
+    height: 500px;
+    display:flex ;
+}
+
+@media only screen and (min-width: 600px) {
+    /*tablets */
+    header .follow-btn {
+        display: flex;
+        align-items:center;
+    }
+    
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.internal {
+        background-color: #81C26E;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    table, tr ,td ,th {
+        font-size: 2;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /*destop*/
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    div.internal {
+        background-color: #81C26E;
+    }
+    
+
+    table, tr ,td ,th {
+        font-size: 3;
+    }
+
+    img {
+        width: 20%;
+        height: auto;
+    }
+    
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    div.internal {
+        background-color: white;/*#FF9671*/
+    }
+
+    ul.square {
+        list-style-type: square;
+    }
+
+    header .follow-btn {
+        display: flex;
+        margin: 0 0 0 auto;
+        align-items:center;
+    }
+}

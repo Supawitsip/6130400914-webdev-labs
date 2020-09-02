@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script src="scripts/scripts.js"></script>
+</head>
+<body>
+    <header>
+        <div class="flex-container">
+            <div>
+                 <img class="profile-pic" src="images/Supawit.jpg" alt="SupawitPic">
+            </div>
+            <div class="profile-name">
+                <h3>Supawit Sippasuchon</h3>
+                <p><b>Date of Birth:</b> 13/1/2000</p>
+            </div>
+            <div class="follow-btn">
+                <p style="color : white" id="follow-button"></p>
+                <button onclick="foolButton()">Try to click!!!</button>  
+            </div>
+        </div>   
+    </header> 
+    
+    <div class="backgroundExternal">
+    <div class = "internal">
+        <p>If you want contact with me please fill <a href="#myForm">the form<a></p>
+        <p>You can check <a href="https://www.facebook.com/art.ployart/" target="_blank">My facebook</a></p>
+        
+        <button onclick="getElementById('time').innerHTML=Date();">What is the time?</button>
+        <p id="time"></p>
+        <br><br>
+        
+        <p><b>Program Language</b><p>
+        <ul class="square">
+            <li>C++</li>
+            <li>Java</li>
+            <li>Python</li>
+        </ul>
+        <table>
+            <caption>My previous project</caption>
+            <tr>
+                <th>project</th>
+                <th>detail</th>
+                <th>date</th> 
+            </tr>
+            <tr>
+                <td>ร้านอาหาร</td>
+                <td>จำรองระบบรับจ่ายของร้านคาแฟ่</td>
+                <td>2018</td>
+            </tr>
+            <tr>
+                <td>Quiz Adventure</td>
+                <td>quiz game that relate adventure</td>
+                <td>2019</td>
+            </tr>
+        </table>
+            
+        <form id = "myForm"><br>
+            <label for="name">Your Name(depending on you)</label><br>
+            <input type="text" id="name" name="name" value=""><br>
+            <label for="emailAddress">Your email</label><br>
+            <input type="email" id="emailAddress" name="emailAddress" value=""><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    </div>
+    
+</body>
+</html>
