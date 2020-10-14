@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Ajax starting point</title>
+
+    <style>
+        .blue {
+            color: blue;
+        }
+        .green {
+            color: green;
+        }
+    </style>
+
+  </head>
+
+  <body>
+    <ol>
+
+    </ol>
+
+    <script>
+    /*  var p = document.querySelector('p');*/
+        var list = document.createElement('li');
+        var ol = document.querySelector('ol');
+        
+          fetch('places.json').then(response => {
+           return response.json();
+            }).then(data => {
+                var i = 1;
+                for (let place of data.results) {
+                    var list = document.createElement('li');
+                    list.innerHTML = "<span class= 'blue'>" + "name = " + place.name
+                    + "</span>" + "<br/>" + "<span class= 'green'>" + "location = " + place.geometry.location.lat 
+                    + " " + place.geometry.location.lng  + "</span>" ;
+                    ol.appendChild(list);
+                    i++;
+                }
+            }).catch(err => {
+
+            });
+        
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Ajax starting point</title>
+
+    <style>
+
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <h1>Reading Student</h1>
+    <p id = 'p1'></p>
+    
+
+
+
+    <script>
+    /*  var p = document.querySelector('p');*/
+          fetch('students.json').then(response => {
+           return response.json();
+            }).then(data => {
+                var i = 1;
+                for (let person of data.wclass) {
+                    document.getElementById("p1").innerHTML += i + ". " + person.student["@attributes"].id + " <strong>" +
+                    person.student.name + "</strong> " + " has skills "+ person.student.skill + "<br/>" ;
+                    i++;
+                }
+            }).catch(err => {
+
+            });
+        
+    </script>
+  </body>
+</html>

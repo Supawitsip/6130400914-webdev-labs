@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button onclick="myFunction()">Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+    <p id = 'text'></p>
+    <script>
+        
+    function myFunction() {
+        var input = document.getElementById('item').value;
+        var list = document.createElement('li');
+        var ul = document.querySelector('ul');
+        var buttonDel = document.createElement('button');
+        var nameButDel = document.createTextNode("delete");
+        list.innerHTML = input;
+        buttonDel.appendChild(nameButDel);
+        buttonDel.addEventListener("click", e =>{
+          e.target.parentElement.remove();
+          let arr = document.querySelectorAll('li');
+          if (arr.length <= 1) {
+          document.getElementById('text').innerHTML = "the list has " + arr.length + " item";
+        }  
+        document.getElementById('text').innerHTML = "the list has " + arr.length + "  items";
+        });
+   
+        list.appendChild(buttonDel);
+        ul.appendChild(list);
+
+
+        let arr = document.querySelectorAll('li');
+        console.log(arr.length);      
+        if (arr.length <= 1) {
+          document.getElementById('text').innerHTML = "the list has " + arr.length + " item";
+        } document.getElementById('text').innerHTML = "the list has " + arr.length + "  items";
+
+    }
+   
+   </script>
+  </body>
+</html>
