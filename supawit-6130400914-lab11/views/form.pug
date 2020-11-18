@@ -1,0 +1,25 @@
+html    
+    head    
+        title Form Tester
+    body    
+        form(action = "/", method = "POST")
+            h1(style = "text-align: center;")  Student Form
+            div(style = "display: flex;")
+                div(style = "flex:1;")
+                    label(for = "name") Name: 
+                div(style = "flex:2;")
+                    input(style = "width:50%;" name = "name" value = "Art")
+            br
+            div(style = "display: flex;")
+                div(style = "flex:1;")
+                    label(for = "company") Internship company: 
+                div(style = "flex:2;")
+                    input(style = "width:50%;" name = "company" value = "IBM")
+            br
+            div(style = "display: flex;")
+                div(style = "flex:1;")
+                    label(for = "skill") Skill:
+                div(style = "flex:2") 
+                    input(style = "width:50%;" name = "skill" value = "HTML")
+            br
+            button(type = "submit") Submit
